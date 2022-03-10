@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style type="text/css">  
+
+     .sibling-element {
+
+        padding: 10px;
+        background-color: #f2f2f2;
+    }
+        /*parent with no position*/
+     /*.parent-element {
+
+        height: 300px;
+        padding:   10px;
+        background-color: #81adc8;*/
+    }
+
+        /*parent that have position*/
+
+    .parent-element {
+        position: relative;
+        height: 300px;
+        padding:   10px;
+        background-color: #81adc8;
+    }
+    
+    /*-position ststic , will stay in the postion no matter what given conditions
+    -relative , when it moves the, the original
+    -Absolute , when moves it start from the nearest parent element(but since the parent dont have except static, it start from the page itself
+     -*/
+
+    .main-element {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        background-color: yellow;
+        padding: 10px;
+    }
+        /*since the parent have position, it move within the boundary of the parent*/
+
+    </style>
+</head>
+<body>
+ <div class="parent-element">
+            <div class="sibling-element">
+                I'm the other sibling element.
+            </div>
+            
+            <div class="main-element">
+                All eyes on me. I am the main element.
+            </div>
+            
+            <div class="sibling-element">
+                I'm the other sibling element.
+            </div>
+</div>
+</body>
+</html>
